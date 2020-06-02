@@ -73,9 +73,9 @@
     [^脚注标记]
     [^脚注标记]: 脚注说明
 
-> 案例：
->> 我要学习[^PHP]
->> [^PHP]: 世界上最好的 web 语言。
+案例：
+我要学习PHP[^PHP]
+[^PHP]: 世界上最好的 web 语言。
 
 # 列表
     1. 无序列表，前置 * 号、+ 号或 - 号和空格
@@ -125,8 +125,8 @@
 >>
 >> <https://www.baidu.com>
 >>
->> [谷歌][google]
->> [google]: https://www.google.com
+[谷歌][google]
+[google]: https://www.google.com "谷歌"
 
 # 图片
     1. ![alt 属性文本](图片地址)
@@ -210,7 +210,7 @@
 >>> ```
 
 # 图表
-    兼容性差
+    兼容性差，参考菜鸟教程：https://www.runoob.com/markdown/md-advance.html
 
 ### graph 流程图（或需申明语言类型：mermaid）
     ```
