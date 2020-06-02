@@ -233,7 +233,7 @@
 >> ```
 
 # 甘特图
-    ```
+    ```mermaid
     gantt
     title 图表名称
     dateForma 日期格式
@@ -245,7 +245,7 @@
     ```
 
 > 案例：
->> ```
+>> ```mermaid
 >> gantt
 >> title 图表名称
 >> dateFormat YYYY-MM-DD
