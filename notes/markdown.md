@@ -155,7 +155,7 @@
 >> <s>删除线</s>  
 >> <u>下划线</u>  
 >> 换行：<br>
->> 缩写：<abbr title="Hyper Text Markup Language" >HTML</abbr>
+>> 缩写：<abbr title="Hyper Text Markup Language" >HTML</abbr>  
 >> 图片：<img width="50" src="https://ss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/wisegame/wh%3D68%2C68/sign=5e987e7a7d8b4710ce7af5cafbe2f5c5/574e9258d109b3de78bb6233c3bf6c81800a4c61.jpg" alt="百度有 title" title="百度图标">
 
 # HTML 特殊符号
