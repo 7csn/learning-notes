@@ -109,25 +109,6 @@
 >>> * 无序列表
 >>>> 区块3
 
-# 代码
-    1. 代码片段两侧加 ` 号
-    2. 代码区块
-        1. 各行前置4个空格
-        2. 用 ``` 包裹代码块，需换行，可以指定语言类型
-
-> 案例：
->> 代码片段：
->>
->> `echo 'Hello world!';`  
->>  
->> 代码区块：  
->>>     function welcome() {
->>>         return 'Hello world!';
->>>     }
->>> ```php
->>> echo 'Hello world!';`
->>> ```
-    
 # 链接
     1. 常规链接
         1. [链接名称](链接地址)
@@ -209,60 +190,88 @@
 # 科学公式 TeX(KaTeX)
     由 $$ 包裹
 
-# 流程图
-    ```mermaid
-    graph TD
-    图块-->图块
-    ID-->图块
-    ...
-    ID->END[结束]
-    ```
-> 案例：
->> ```mermaid
->> graph TD
->> A[开始]-->B{是否登录}
->> B-->C[用户管理]
->> C-->D{是否注册}
->> D-->|是|F(注册)
->> D-->|否|E(输入用户名密码)
->> E-->G[登录]
->> F-->H[注册完成]
->> H-->G
->> G-->I[完善个人信息]
->> I-->END[结束]
->> ```
-
-# 甘特图
-    ```mermaid
-    gantt
-    title 图表名称
-    dateForma 日期格式
-    section 任务1
-    需求分析1:日期, 持续天数
-    section 任务2
-    需求分析2:日期
-    ...
-    ```
+# 代码
+    1. 代码片段两侧加 ` 号
+    2. 代码区块
+        1. 各行前置4个空格
+        2. 用 ``` 包裹代码块，需换行，可以指定语言类型
 
 > 案例：
->> ```mermaid
->> gantt
->> title 图表名称
->> dateFormat YYYY-MM-DD
->> section 任务1
->> 需求分析1:2018-01-11, 8d
->> section 任务2
->> 需求分析2:2018-01-19, 15d
->> section 任务3
->> 需求分析3:2018-01-26, 15d
->> ```
+>> 代码片段：
+>>
+>> `echo 'Hello world!';`  
+>>  
+>> 代码区块：  
+>>>     function welcome() {
+>>>         return 'Hello world!';
+>>>     }
+>>> ```php
+>>> echo 'Hello world!';`
+>>> ```
 
-# 绘制流程图 Flowchart
+# 图表
+    兼容性差
 
+### graph 流程图（或需申明语言类型：mermaid）
+    ```
+    graph 方向
+    图块ID-->图块ID
+    图块ID-->图块ID
+    ...
+    图块ID->END
+    ```
+    方向：
+        TB 从上到下
+        TD 同TB
+        BT 从下到上
+        RL 从右到左
+        LR 从左到右
+    
+    图块说明（可选）：
+        置图块ID后，为显示内容，被括号包裹：{菱形判断} [方块流程] (圆角方块判断结果)
+        默认显示图块ID，方形块；同ID说明后者覆盖前者
+案例：
+```
+graph TD
+A[开始]-->B{是否登录}
+B-->C[用户管理]
+C-->D{是否注册}
+D-->|是|F(注册)
+D-->|否|E(输入用户名密码)
+E-->G[登录]
+F-->H[注册完成]
+H-->G
+G-->I[完善个人信息]
+I-->END[结束]
+```
+
+### flow 流程图
+    类型：
+        1. 开始（圆角方块）：start
+        2. 结束（圆角方块）：end
+        3. 操作（方块）：operation
+        4. 子程序：subroutine
+        5. 条件（菱形）：condition
+        6. 输入输出（平行四边形）：inputoutput
+    文本：
+        流程框文字说明，可后接|修饰，例如：past、current
+    路径（可选）：
+        网络链接
+    流程：
+        标签间的连接流程可以连缀
+        方向：left 或 right
+    ```flow
+    标签=>类型: 文本:>路径
+    
+    标签->标签
+    标签(方向)->标签
+    条件标签(条件)->标签
+    ```
+案例：
 ```flow
 st=>start: 用户登陆
 op=>operation: 登陆操作
-cond=>condition: 登陆成功 Yes or No?
+cond=>condition: 登陆状态判断
 e=>end: 进入后台
 
 st->op->cond
@@ -270,11 +279,48 @@ cond(yes)->e
 cond(no)->op
 ```
 
-# 绘制序列图 Sequence Diagram
+# 甘特图
+    ```
+    gantt
+    title 图表名称
+    dateForma 日期格式
+    section 任务1
+    需求分析1:日期, 持续天数
+    section 任务2
+    需求分析2:日期, 持续天数
+    ...
+    ```
 
+案例：
+```
+gantt
+title 计划表
+dateFormat YYYY-MM-DD
+section Lu
+Lu's work:2018-01-11, 5d
+section Yu
+Yu's work:2018-01-13, 5d
+section Chen
+Chen's work:2018-01-15, 5d
+section Liu
+Liu's work:2018-01-17, 5d
+```
+
+# 序列图 Sequence Diagram
+    区块名自发形成中间连线的上下两个块
+    ```seq
+    区块x->区块y: 从 区块x 连线 到 区块y 连线 的 实线实心小箭头，线上文本
+    区块m-->区块n: 从 区块n 连线 到 区块n 连线 的 虚线实心小箭头，线上文本
+    区块a->>区块b: 从 区块a 连线 到 区块b 连线 的 实线线状大箭头，线上文本
+    Note left of 区块t: 区块t 连线 左侧侧文本 
+    Note right of 区块t: 区块t 连线 右侧文本 
+    ```
+案例：
 ```seq
-Andrew->China: Says Hello
-Note right of China: China thinks\nabout it
-China-->Andrew: How are you?
-Andrew->>China: I am good thanks!
+客户端-->服务端: 请求连接
+服务端-->客户端: 同意连接
+客户端->服务端: 连接确定
+客户端->>服务端: 请求数据
+Note right of 服务端: 处理请求数据
+服务端->>客户端: 返回处理结果
 ```
