@@ -124,12 +124,10 @@
 # 图片
     1. ![alt 属性文本](图片地址)
     2. ![alt 属性文本](图片地址 "可选标题")
-    3. 使用 HTML 的 img 标签
 
 > 案例：
 >> ![百度无 title](https://ss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/wisegame/wh%3D68%2C68/sign=5e987e7a7d8b4710ce7af5cafbe2f5c5/574e9258d109b3de78bb6233c3bf6c81800a4c61.jpg)
 >> ![百度有 title](https://ss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/wisegame/wh%3D68%2C68/sign=5e987e7a7d8b4710ce7af5cafbe2f5c5/574e9258d109b3de78bb6233c3bf6c81800a4c61.jpg "百度图标")
->> <img width="50" src="https://ss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/wisegame/wh%3D68%2C68/sign=5e987e7a7d8b4710ce7af5cafbe2f5c5/574e9258d109b3de78bb6233c3bf6c81800a4c61.jpg" alt="百度有 title" title="百度图标">
 
 # 表格
     用 | 分隔左右单元格，首行为 head，次行为分隔行，其余为 body  
@@ -145,7 +143,7 @@
     前置 \ 符以解除特殊符号特性，特殊符号：\ ` * _ {} [] () # + - . !
 
 # HTML 元素
-    目前支持的元素有 <kbd> <b> <i> <em> <sup> <sub> <s> <u> <br> <abbr> 等
+    目前支持的元素有 <kbd> <b> <i> <em> <sup> <sub> <s> <u> <br> <abbr> <img> 等
 
 > 案例：
 >> 键盘文本：<kbd>Ctrl</kbd> 
@@ -158,6 +156,7 @@
 >> <u>下划线</u>  
 >> 换行：<br>
 >> 缩写：<abbr title="Hyper Text Markup Language" >HTML</abbr>
+>> 图片：<img width="50" src="https://ss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/wisegame/wh%3D68%2C68/sign=5e987e7a7d8b4710ce7af5cafbe2f5c5/574e9258d109b3de78bb6233c3bf6c81800a4c61.jpg" alt="百度有 title" title="百度图标">
 
 # HTML 特殊符号
 
