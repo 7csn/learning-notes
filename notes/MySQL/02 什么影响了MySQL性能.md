@@ -217,7 +217,7 @@ noatime,nodiratime,data=writeback 1 1
 ### MySQL体系结构
 插件式存储引擎
 
-![MySQL体系结构](./img/02.1.png "MySQL体系结构")
+![MySQL体系结构](./img/02.1.png?raw=true "MySQL体系结构")
 
 #### 常用储存引擎：
 存储引擎共有的表结构文件：frm
