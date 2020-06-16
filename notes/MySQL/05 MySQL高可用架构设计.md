@@ -523,9 +523,9 @@ mmm 监控主从复制健康状况
     
     1. /etc/mysql-mmm/mmm_common.conf
     
-        ![mmm_comment配置](,/img/05.12.png?raw=true "mmm_comment配置")  
-        ![mmm_comment配置](,/img/05.13.png?raw=true "mmm_comment配置")  
-        ![mmm_comment配置](,/img/05.14.png?raw=true "mmm_comment配置")
+        ![mmm_comment配置](./img/05.12.png?raw=true "mmm_comment配置")  
+        ![mmm_comment配置](./img/05.13.png?raw=true "mmm_comment配置")  
+        ![mmm_comment配置](./img/05.14.png?raw=true "mmm_comment配置")
     
     2. /etc/mysql-mmm/mmm_agent.conf
     
@@ -537,8 +537,8 @@ mmm 监控主从复制健康状况
     
     * /etc/mysql-mmm/mmm_mon.conf
     
-        ![mmm_mon配置](,/img/05.15.png?raw=true "mmm_mon配置")
-        ![mmm_mon配置](,/img/05.16.png?raw=true "mmm_mon配置")
+        ![mmm_mon配置](./img/05.15.png?raw=true "mmm_mon配置")
+        ![mmm_mon配置](./img/05.16.png?raw=true "mmm_mon配置")
     
 4. 运行mmm监控服务
 
@@ -609,7 +609,7 @@ mmm 监控主从复制健康状况
 
 MHA（Master High Avaliability），由Perl脚本开发，支持基于日志点和基于GTID的复制，推荐GTID
 
-![MHA](,/img/05.17.png?raw=true "MHA")
+![MHA](./img/05.17.png?raw=true "MHA")
 
 功能：
 * 监控主数据库服务器是否可用
@@ -625,7 +625,7 @@ MHA是如何进行主从切换的：
 * 提升备选主服务器作为新的主服务器
 * 迁移集群中的其它从库作为新主的从服务器
 
-![MHA 演示架构](,/img/05.18.png?raw=true "MHA 演示架构")
+![MHA 演示架构](./img/05.18.png?raw=true "MHA 演示架构")
 
 #### MHA配置步骤
 1. 集群内所有主机的SSH免认证登录
@@ -642,7 +642,7 @@ MHA是如何进行主从切换的：
     
 2. 集群节点安装MHA-node软件包，监控服务器安装MHA-manager软件包
 
-    ![监控节点安装安装perl支持包](,/img/05.19.png?raw=true "监控节点安装安装perl支持包")
+    ![监控节点安装安装perl支持包](./img/05.19.png?raw=true "监控节点安装安装perl支持包")
     
     主从节点：
     
@@ -714,10 +714,10 @@ MHA是如何进行主从切换的：
     
     主从切换虚拟VIP漂移脚本（/user/bin/master_ip_failover）：
     
-    ![VIP漂移脚本](,/img/05.21.png?raw=true "VIP漂移脚本")
-    ![VIP漂移脚本](,/img/05.22.png?raw=true "VIP漂移脚本")
-    ![VIP漂移脚本](,/img/05.23.png?raw=true "VIP漂移脚本")
-    ![VIP漂移脚本](,/img/05.24.png?raw=true "VIP漂移脚本")
+    ![VIP漂移脚本](./img/05.21.png?raw=true "VIP漂移脚本")
+    ![VIP漂移脚本](./img/05.22.png?raw=true "VIP漂移脚本")
+    ![VIP漂移脚本](./img/05.23.png?raw=true "VIP漂移脚本")
+    ![VIP漂移脚本](./img/05.24.png?raw=true "VIP漂移脚本")
     
     主服务器：
     
@@ -787,7 +787,7 @@ MHA是如何进行主从切换的：
 
 #### MHA架构实力演示
 
-![MHA架构实力演示](,/img/05.20.png?raw=true "MHA架构实力演示")
+![MHA架构实力演示](./img/05.20.png?raw=true "MHA架构实力演示")
 
 #### MHA架构优缺点
 
@@ -838,11 +838,11 @@ MHA是如何进行主从切换的：
 
 MariaDB公司发布的支持高可用的、负载均衡的就是有有良好扩展性的插件式中间件
 
-![MaxScale的插件](,/img/05.25.png?raw=true "MaxScale的插件")
+![MaxScale的插件](./img/05.25.png?raw=true "MaxScale的插件")
 
 安装：
 
-![MaxScale安装](,/img/05.26.png?raw=true "MaxScale安装")
+![MaxScale安装](./img/05.26.png?raw=true "MaxScale安装")
 
 ```
 # 下载maxscale源
